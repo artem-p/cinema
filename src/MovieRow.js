@@ -1,11 +1,18 @@
+import React, {useState, useEffect} from 'react';
 import './MovieRow.css';
 
-import React from 'react'
 
 function MovieRow({ title }) {
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        // if [], run once when loads and don't run again
+        
+    }, [])
+
     return (
         <div>
-            {title}
+            <h2>{title}</h2>
         </div>
     )
 }
