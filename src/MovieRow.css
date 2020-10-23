@@ -1,5 +1,15 @@
+.movieRow__posters {
+    display: flex;
+}
+
 .movieRow__poster {
     width: 100%;
     object-fit: contain;
     max-height: 300px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.movieRow__poster:hover {
+    transform: scale(1.08);
 }
