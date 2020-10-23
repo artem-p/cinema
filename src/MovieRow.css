@@ -1,0 +1,5 @@
+.movieRow__poster {
+    width: 100%;
+    object-fit: contain;
+    max-height: 300px;
+}
