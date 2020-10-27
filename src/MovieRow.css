@@ -5,18 +5,30 @@
     padding: 20px;
 }
 
+
 .movieRow__posters::-webkit-scrollbar {
     display: none;
 }
 
+
 .movieRow__poster {
     width: 100%;
     object-fit: contain;
-    max-height: 300px;
+    max-height: 100px;
     margin-right: 10px;
     transition: transform 450ms;
 }
 
+
+.movieRow__posterLarge {
+    max-height: 250px;
+}
+
+
 .movieRow__poster:hover {
     transform: scale(1.08);
+}
+
+.movieRow__posterLarge:hover {
+    transform: scale(1.09);
 }
