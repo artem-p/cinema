@@ -5,24 +5,39 @@ import requests from './requests';
 
 
 function Banner() {
-    const [movie, setMovie] = useState([]);
+    const [movie, setMovie] = useState({});
 
     useEffect(() => {
         async function fetchMovie() {
             const request = await api.get(requests.fetchTrending);
 
-            const randomIndex = Math.floor(Math.random * request.data.results.length);
+            const randomIndex = Math.floor(Math.random() * request.data.results.length);
             const randomMovie = request.data.results[randomIndex];
             
             setMovie(randomMovie);
         }
 
         fetchMovie();
-    })
+    }, [])
+
+    console.log(movie);
 
     return (
-        <header>
-            
+        <header 
+            className="banner"
+            style={{
+                backgroundSize: "cover",
+                backgroundImage: `url(
+                    "https://image.tmdb.org/t/p/original/${movie?.backdrop_path}"
+                )`,
+                backgroundPosition: "center center"
+            }}
+        >
+            <div className="banner__contents">
+                <h1>
+                    {movie?.title || movie?.name || movie?.original_name}
+                </h1>
+            </div>
         </header>
     )
 }
