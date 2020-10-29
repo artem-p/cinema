@@ -34,19 +34,19 @@ function Banner() {
             }}>
                 
             <div className="banner__contents">
-                <h1>
+                <h1 className="banner__title">
                     {movie?.title || movie?.name || movie?.original_name}
                 </h1>
+                
+                <div className="banner__buttons">
+                    <button className="banner__button">Play</button>
+                    <button className="banner__button">My List</button>
+                </div>
+                
+                <h1 className="banner__description">
+                    {movie?.overview}
+                </h1>
             </div>
-
-            <div className="banner__buttons">
-                <button className="banner__button">Play</button>
-                <button className="banner__button">My List</button>
-            </div>
-
-            <h1 className="banner__description">
-                {movie?.overview}
-            </h1>
         </header>
     )
 }
