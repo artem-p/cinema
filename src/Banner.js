@@ -20,7 +20,10 @@ function Banner() {
         fetchMovie();
     }, [])
 
-    console.log(movie);
+
+    function truncate(str, number) {
+        return str?.length > number ? str.substr(0, number - 1) + "…" : str;
+    }
 
     return (
         <header 
@@ -44,7 +47,7 @@ function Banner() {
                 </div>
                 
                 <h1 className="banner__description">
-                    {movie?.overview}
+                    {truncate(movie?.overview, 150)}
                 </h1>
             </div>
         </header>
