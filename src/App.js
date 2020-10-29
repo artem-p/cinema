@@ -7,7 +7,7 @@ import Banner from './Banner';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Banner />
 
       <MovieRow title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargePosters={true}/>
