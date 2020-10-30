@@ -3,11 +3,15 @@ import './App.css';
 import MovieRow from './MovieRow';
 import requests from './requests';
 import Banner from './Banner';
+import Navbar from './Navbar';
 
 
 function App() {
+
   return (
     <div className="app">
+      <Navbar />
+
       <Banner />
 
       <MovieRow title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargePosters={true}/>
